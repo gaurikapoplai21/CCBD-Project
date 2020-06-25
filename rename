@@ -1,1 +1,11 @@
+with open('wav.scp','r') as file :
+  filedata = file.read()
+
+# Replace the target string
+filedata = filedata.replace('/media/user/ProfSavitha/Data/Telugu/te-in-Train/', '/content/espnet/egs/telugu/asr1/wavdata/an4/te-in-Train/Audios/')
+
+# Write the file out again
+with open('wav.scp','w') as file:
+  file.write(filedata)
+print("done")
 
